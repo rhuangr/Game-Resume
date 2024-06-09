@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Interactable
+  - Living Room
+  - Project Room
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - WallGround
+  - Interactables
+  - Ball
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 808563347
+    locked: 0
+  - name: Shadow
+    uniqueID: 4169205701
+    locked: 0
+  - name: Wall
+    uniqueID: 390580493
+    locked: 0
+  - name: Furniture
+    uniqueID: 129202995
+    locked: 0
+  - name: Outlines
+    uniqueID: 3458609387
+    locked: 0
+  - name: Player
+    uniqueID: 1371729795
+    locked: 0
+  - name: FurnitureTop
+    uniqueID: 1658502499
+    locked: 0
+  - name: Dialogue
+    uniqueID: 1925331197
+    locked: 0
+  - name: Menu
+    uniqueID: 3050325459
+    locked: 0
