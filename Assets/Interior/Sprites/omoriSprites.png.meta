@@ -2995,7 +2995,7 @@ TextureImporter:
         width: 15
         height: 25
       alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      pivot: {x: 0.5, y: -0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3120,8 +3120,8 @@ TextureImporter:
         y: 1674
         width: 37
         height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5654,48 +5654,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: omoriSprites_265
-      rect:
-        serializedVersion: 2
-        x: 582
-        y: 1312
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57a19bb4fc119d54d92a502347405a36
-      internalID: 760286475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: omoriSprites_266
-      rect:
-        serializedVersion: 2
-        x: 646
-        y: 1319
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3fa58b6707350f4eb423e745adcf53d
-      internalID: 454098295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: omoriSprites_267
       rect:
         serializedVersion: 2
@@ -5741,10 +5699,10 @@ TextureImporter:
       name: omoriSprites_269
       rect:
         serializedVersion: 2
-        x: 742
-        y: 1269
-        width: 56
-        height: 82
+        x: 355
+        y: 1756
+        width: 26
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5906,27 +5864,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: omoriSprites_277
-      rect:
-        serializedVersion: 2
-        x: 649
-        y: 1259
-        width: 14
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f715350448b9e9419cbea1b61f7c020
-      internalID: 1535179576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: omoriSprites_278
       rect:
         serializedVersion: 2
@@ -6018,8 +5955,8 @@ TextureImporter:
         y: 1265
         width: 60
         height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6896,10 +6833,10 @@ TextureImporter:
       name: omoriSprites_324
       rect:
         serializedVersion: 2
-        x: 224
-        y: 941
-        width: 113
-        height: 211
+        x: 353
+        y: 1922
+        width: 30
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8538,8 +8475,8 @@ TextureImporter:
         y: 901
         width: 78
         height: 58
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -13578,8 +13515,8 @@ TextureImporter:
         y: 327
         width: 78
         height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -16531,6 +16468,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: omoriSprites_595
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1440
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902793364651d3d47819c8324cd08dc7
+      internalID: -2067166210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omoriSprites_783
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1662
+        width: 56
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f85f50ab358ab4f820a1ef58a9c03f
+      internalID: -236941759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -17302,6 +17281,7 @@ TextureImporter:
       omoriSprites_780: -1627508493
       omoriSprites_781: 1852746217
       omoriSprites_782: 339694817
+      omoriSprites_783: -236941759
       omoriSprites_79: -1306323065
       omoriSprites_8: 1794374515
       omoriSprites_80: 49032541

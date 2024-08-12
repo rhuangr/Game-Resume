@@ -35,8 +35,7 @@ public class InteractManager : MonoBehaviour
 
         if (Interactable == "Door"){
             GameObject myMusicManager = GameObject.Find("SFXManager");
-            
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             myMusicManager.GetComponent<MusicManager>().playHouseJazz();
         }
 

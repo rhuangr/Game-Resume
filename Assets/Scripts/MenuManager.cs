@@ -24,7 +24,7 @@ public class MenuManager : MonoBehaviour
         menu.SetActive(false);
         musicMenu.SetActive(false);
     }
-    public void MainMenu(){
+    public void OpenMenu(){
         currentMenu = mainMenu;
         currentMenu.SetActive(true);
     }

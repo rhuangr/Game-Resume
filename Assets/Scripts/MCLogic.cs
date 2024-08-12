@@ -1,11 +1,7 @@
 using System;
-using System.Collections;
+
 using System.Collections.Generic;
-using Unity.Collections;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
 public class MCLogic : MonoBehaviour
@@ -58,22 +54,25 @@ public class MCLogic : MonoBehaviour
             setAnimation("isWalkingSide");
             return;
         }
-        if (inputVector.x > 0){
+        else if (inputVector.x > 0){
             GetComponent<SpriteRenderer>().flipX = false;
             setAnimation("isWalkingSide");
             return;
         }
     
-        if (inputVector.y < 0){
+        else if (inputVector.y < 0){
             setAnimation("isWalkingFront");
             return;
         }
-        if (inputVector.y > 0){
+        else if (inputVector.y > 0){
             setAnimation("isWalkingBack");
             return;
+        }
+        else{
+            setAnimation("isIdle");
         }       
     }
-    
+
     private void setAnimation(string animation){
         myAnimator.SetBool( currentAnimation, false);
         currentAnimation = animation;
@@ -113,7 +112,7 @@ public class MCLogic : MonoBehaviour
             myMenuManager.back();
         }
         else{
-            myMenuManager.MainMenu();
+            myMenuManager.OpenMenu();
         }
     }
 
