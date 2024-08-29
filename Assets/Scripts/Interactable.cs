@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class interact : MonoBehaviour
 {   
     string detectLayer = "Interactables";
-    [SerializeField] MCLogic MC;
+    private MCLogic MC;
     [SerializeField] AudioClip clickSFX;
     [SerializeField] float glowSpeed;
     Transform child;
@@ -20,7 +20,6 @@ public class interact : MonoBehaviour
         child = transform.Find("Outline");
         sprite = child.gameObject.GetComponent<SpriteRenderer>();
         color = sprite.color;
-
         MC = FindObjectOfType<MCLogic>();
     }
     private void Update() {
@@ -74,7 +73,6 @@ public class interact : MonoBehaviour
       private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")){
             MC.currentInteract = gameObject.name;
-            Debug.Log(gameObject.name);
             playerIsNear = true;
             MC.enableInteract();
         }

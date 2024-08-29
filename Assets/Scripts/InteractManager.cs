@@ -30,13 +30,16 @@ public class InteractManager : MonoBehaviour
         if (Interactable == "Piano"){
             myMM.playChord();
             FindObjectOfType<MenuManager>().MusicMenu();
-           
         }
 
         if (Interactable == "Door"){
             GameObject myMusicManager = GameObject.Find("SFXManager");
             SceneManager.LoadScene(1);
             myMusicManager.GetComponent<MusicManager>().playHouseJazz();
+        }
+        
+        if (Interactable == "Computer"){
+            Application.OpenURL("https://github.com/rhuangr");
         }
 
       

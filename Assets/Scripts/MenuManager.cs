@@ -48,7 +48,7 @@ public class MenuManager : MonoBehaviour
     }
 
     public void github(){
-        Application.OpenURL("https://github.com/smartsmartxd");
+        Application.OpenURL("https://github.com/rhuangr");
     }
 
     public void mail(){
