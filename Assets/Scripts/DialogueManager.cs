@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
-using Unity.Collections.LowLevel.Unsafe;
 using System;
 
 public class DialogueManager : MonoBehaviour
@@ -73,13 +70,6 @@ public class DialogueManager : MonoBehaviour
         dogSpeak(dialogueBank.entrance);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        
-    }
-    
     public void showRoom(String room){
         if (currentRoom == room){
             return;
@@ -88,7 +78,7 @@ public class DialogueManager : MonoBehaviour
         currentRoom = room;
     }
    
-    public void dogSpeak( string text){
+    public void dogSpeak(string text){
         
         if (currentCoroutineText != null){
             StopCoroutine(currentCoroutineText);
@@ -162,10 +152,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     IEnumerator adjustDialogueBox(RectTransform boxTransform, int stopInt, float rateDirection){
-        Debug.Log(boxTransform.anchoredPosition.y + " : " + stopInt);
-        
         while ( boxTransform.anchoredPosition.y != stopInt){
-            
             boxTransform.anchoredPosition += new Vector2(0, rateDirection);
             yield return new WaitForSeconds(changeRate);
         }

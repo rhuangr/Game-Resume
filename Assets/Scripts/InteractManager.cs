@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build.Content;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 using UnityEngine.SceneManagement;
+
 
 public class InteractManager : MonoBehaviour
 {
@@ -14,17 +12,14 @@ public class InteractManager : MonoBehaviour
     [SerializeField] float frictionFactor;
     [SerializeField] float frictionRate;
 
-    // [SerializeField] GameObject ball;
-    Rigidbody2D rb;
+    private bool SHUTUP = false;
+    private List<string> interactables = new List<string>(){"Computer", "Door", "Phone", "Piano"};
     private void Start() {
         myMM = FindObjectOfType<MusicManager>();
         DontDestroyOnLoad(gameObject);
         // rb = GameObject.Find("balltest").GetComponent<Rigidbody2D>();
     }
-    
-    private void Update() {
-        
-    }
+
     public void interact(string Interactable){
         
         if (Interactable == "Piano"){
@@ -32,17 +27,28 @@ public class InteractManager : MonoBehaviour
             FindObjectOfType<MenuManager>().MusicMenu();
         }
 
-        if (Interactable == "Door"){
+        else if (Interactable == "Door"){
             GameObject myMusicManager = GameObject.Find("SFXManager");
             SceneManager.LoadScene(1);
             myMusicManager.GetComponent<MusicManager>().playHouseJazz();
         }
         
-        if (Interactable == "Computer"){
+        else if (Interactable == "Computer"){
             Application.OpenURL("https://github.com/rhuangr");
         }
 
-      
+        else if (Interactable == "Phone"){
+            Application.OpenURL("https://linkedin.com/in/rhuangr");
+        }
+        else{
+            return;
+        }
+        interactables.Remove(Interactable);
+        if (interactables.Count == 0 && SHUTUP == false){
+            string dialogue = FindObjectOfType<AllDialogues>().lastInteraction;
+            FindObjectOfType<DialogueManager>().dogSpeak(dialogue);
+            SHUTUP = true;
+        }
     }
 
     // public void interactBall(float x, float y){

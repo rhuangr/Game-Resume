@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,13 +7,10 @@ public class MusicManager : MonoBehaviour
     
 
     [SerializeField] AudioSource[] myAudioSource;
-
     [SerializeField] GameObject slider;
     public AudioSource currentAudio;
 
     private float previousVolume;
-
-    
 
     private void Start() {
         
@@ -30,7 +25,6 @@ public class MusicManager : MonoBehaviour
         if (currentAudio.volume != 0){
             previousVolume = currentAudio.volume;
         }
-        
         currentAudio.volume = 0;
     }
 
@@ -46,16 +40,23 @@ public class MusicManager : MonoBehaviour
     }
 
     public void playMainMenuMusic(){
+        if (currentAudio == myAudioSource[1]){
+            return;
+        }
         stopMusic();
         currentAudio = myAudioSource[1];
         myAudioSource[1].Play();
+        currentAudio.volume = slider.GetComponent<Slider>().value;
     }
 
     public void playHouseJazz(){
+        if (currentAudio == myAudioSource[2]){
+            return;
+        }
         stopMusic();
         currentAudio = myAudioSource[2];
-        Debug.Log("playin house jazz");
         myAudioSource[2].Play();
+        currentAudio.volume = slider.GetComponent<Slider>().value;
     }
     public void playChord(){
         

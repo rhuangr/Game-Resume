@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class MenuManager : MonoBehaviour
 {
@@ -44,7 +41,7 @@ public class MenuManager : MonoBehaviour
     }
 
     public void linkedin(){
-        Application.OpenURL("https://www.linkedin.com/feed/");
+        Application.OpenURL("https://www.linkedin.com/in/rhuangr");
     }
 
     public void github(){

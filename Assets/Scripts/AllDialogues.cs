@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class AllDialogues : MonoBehaviour
@@ -12,6 +11,7 @@ public class AllDialogues : MonoBehaviour
     [TextArea(3,3)]
     public string firstInteraction;
     
-   
+    [TextArea(3,3)]
+    public string lastInteraction;
 
 }
