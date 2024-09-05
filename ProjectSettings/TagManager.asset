@@ -56,14 +56,17 @@ TagManager:
   - name: Furniture
     uniqueID: 129202995
     locked: 0
+  - name: FurnitureTop
+    uniqueID: 1658502499
+    locked: 0
   - name: Outlines
     uniqueID: 3458609387
     locked: 0
   - name: Player
     uniqueID: 1371729795
     locked: 0
-  - name: FurnitureTop
-    uniqueID: 1658502499
+  - name: bbRichard
+    uniqueID: 884875527
     locked: 0
   - name: Dialogue
     uniqueID: 1925331197

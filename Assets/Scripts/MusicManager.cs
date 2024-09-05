@@ -59,8 +59,11 @@ public class MusicManager : MonoBehaviour
         currentAudio.volume = slider.GetComponent<Slider>().value;
     }
     public void playChord(){
-        
         myAudioSource[3].Play();
+    }
+
+    public void playPageFlip(){
+        myAudioSource[4].Play();
     }
 
     private void stopMusic(){

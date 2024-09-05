@@ -53,10 +53,8 @@ public class DialogueManager : MonoBehaviour
     string currentText;
     void Start()
     {
-
         dialogueBoxTransform = dialogueBox.GetComponent<RectTransform>();
         dialogueBoxTransform.anchoredPosition = new Vector2(0, -400);
-
 
         roomText = descriptionBox.GetComponentInChildren<TextMeshProUGUI>();
         currentRoom = "Living Room";
@@ -104,29 +102,23 @@ public class DialogueManager : MonoBehaviour
        
         foreach (char c in s){
             currentText += c;
-
-            if (c == '<'){  // Start of a rich text tag
+            if (c == '<'){
                 inTag = true;
             }
-
-            if (c == '>'){  // End of a rich text tag
+            if (c == '>'){
                 inTag = false;
             }
-
             text.text = currentText;
 
-            // Yield only if we're not in the middle of a rich text tag
             if (!inTag){
-                yield return new WaitForSeconds(delayOnCharacter);  // Wait for the specified delay
+                yield return new WaitForSeconds(delayOnCharacter);
             }
-
             if (c == '.'){
                 currentText = "";
                 yield return new WaitForSeconds(delayOnPeriod);
             }
         }
         isWriting = false;
-        Invoke("closeDialogue", 3.0f);
     }
 
     IEnumerator animateDog(){

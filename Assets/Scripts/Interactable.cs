@@ -5,7 +5,7 @@ public class interact : MonoBehaviour
     string detectLayer = "Interactables";
     private MCLogic MC;
     [SerializeField] AudioClip clickSFX;
-    [SerializeField] float glowSpeed;
+    private float glowSpeed = 0.005f;
     Transform child;
     SpriteRenderer sprite;
     Color color;
@@ -37,7 +37,6 @@ public class interact : MonoBehaviour
             mouseIsOver = false;
         }
         else{
-         
             mouseIsOver = true;
         }
     }
