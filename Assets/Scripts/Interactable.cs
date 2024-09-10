@@ -20,7 +20,7 @@ public class interact : MonoBehaviour
         MC = FindObjectOfType<MCLogic>();
     }
     private void Update() {
-        detectMouse();
+        // detectMouse();
         glow(playerIsNear | mouseIsOver);
     }
 

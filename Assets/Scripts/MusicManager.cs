@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,22 +11,25 @@ public class MusicManager : MonoBehaviour
     [SerializeField] GameObject slider;
     public AudioSource currentAudio;
 
-    private float previousVolume;
+    private float unmutedVolume;
+
+    private bool isMuted;
 
     private void Start() {
         
         DontDestroyOnLoad(gameObject);
         myAudioSource = GetComponents<AudioSource>();
         playMainMenuMusic();
-        previousVolume = currentAudio.volume;
+        unmutedVolume = currentAudio.volume;
         slider.GetComponent<Slider>().value = currentAudio.volume;
     }
 
     public void mute(){
         if (currentAudio.volume != 0){
-            previousVolume = currentAudio.volume;
+            unmutedVolume = currentAudio.volume;
         }
         currentAudio.volume = 0;
+        isMuted = true;
     }
 
     public void changeVolume(){
@@ -33,7 +37,8 @@ public class MusicManager : MonoBehaviour
     }
 
     public void unmute(){
-        currentAudio.volume = previousVolume;
+        currentAudio.volume = unmutedVolume;
+        isMuted = false;
     }
     public void clickSFX(){
         myAudioSource[0].Play();
@@ -46,6 +51,10 @@ public class MusicManager : MonoBehaviour
         stopMusic();
         currentAudio = myAudioSource[1];
         myAudioSource[1].Play();
+        if (isMuted){
+            currentAudio.volume = 0;
+            return;
+        }
         currentAudio.volume = slider.GetComponent<Slider>().value;
     }
 
@@ -56,6 +65,10 @@ public class MusicManager : MonoBehaviour
         stopMusic();
         currentAudio = myAudioSource[2];
         myAudioSource[2].Play();
+        if (isMuted){
+            currentAudio.volume = 0;
+            return;
+        }
         currentAudio.volume = slider.GetComponent<Slider>().value;
     }
     public void playChord(){
